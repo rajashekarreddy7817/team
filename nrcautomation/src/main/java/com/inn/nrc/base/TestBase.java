@@ -23,7 +23,7 @@ public class TestBase {
 		
 		try {
 			prop= new Properties();
-			FileInputStream fis = new FileInputStream("C:\\software\\team_project_att\\nrcautomation\\com.inn.nrc.config\\config.properties");
+			FileInputStream fis = new FileInputStream("com.inn.nrc.config\\config.properties");
 			prop.load(fis);
 		}
 		catch (FileNotFoundException e) {
