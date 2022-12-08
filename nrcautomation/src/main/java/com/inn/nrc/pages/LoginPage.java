@@ -22,7 +22,7 @@ public class LoginPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	public HomePage loginNRC(String usn, String pwd) throws InterruptedException {
+	public HomePage loginNRC(String usn, String pwd){
 		username.sendKeys(usn);
 		password.sendKeys(pwd);
 		submit.click();
