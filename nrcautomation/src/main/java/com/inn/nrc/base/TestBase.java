@@ -1,6 +1,5 @@
 package com.inn.nrc.base;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -11,22 +10,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-import com.aventstack.extentreports.ExtentTest;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
-	public static ExtentTest test;
+	//public static ExtentTest test;
 	
 
 	public TestBase()   {
 		
 		try {
 			prop= new Properties();
-			FileInputStream fis = new FileInputStream("config.properties");
+			FileInputStream fis = new FileInputStream("C:\\software\\team_project_att\\nrcautomation\\com.inn.nrc.config\\config.properties");
 			prop.load(fis);
 		}
 		catch (FileNotFoundException e) {
@@ -58,8 +55,8 @@ public class TestBase {
 
 		//		driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.MINUTES);
-			driver.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);//its a global wait applicable to all WebElement which driver interact
+			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);//its a global wait applicable to all WebElement which driver interact
 			driver.get(prop.getProperty("url"));
 	
 	}
