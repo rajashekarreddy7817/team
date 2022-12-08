@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -28,7 +26,7 @@ public class TestBase {
 		
 		try {
 			prop= new Properties();
-			FileInputStream fis = new FileInputStream("C:\\software\\team_project_att\\nrcautomation\\src\\main\\java\\com\\inn\\nrc\\config\\confi.properties");
+			FileInputStream fis = new FileInputStream("C:\\Users\\kondeti.reddy\\Documents\\Softwares\\team_project_att\\nrcautomation\\src\\main\\java\\com\\inn\\nrc\\config\\confi.properties");
 			prop.load(fis);
 		}
 		catch (FileNotFoundException e) {
