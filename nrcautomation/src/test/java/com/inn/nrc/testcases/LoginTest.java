@@ -1,5 +1,7 @@
 package com.inn.nrc.testcases;
 
-public class LoginTest {
+import com.inn.nrc.base.TestBase;
+
+public class LoginTest extends TestBase{
 
 }

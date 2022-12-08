@@ -11,13 +11,13 @@ import com.inn.nrc.base.TestBase;
 public class Login extends TestBase {
 	
 	
-	@FindBy(xpath = "//input[@name=\"username\"]")
+	@FindBy(xpath = "//input[@name='username']")
 	WebElement username;
 	
-	@FindBy(xpath = "//input[@id=\"password\"]")
+	@FindBy(xpath = "//input[@id='password']")
 	WebElement password;
 	
-	@FindBy(xpath = "//button[@id=\"kc-login\"]")
+	@FindBy(xpath = "//button[@id='kc-login']")
 	WebElement submit;
 	
 	

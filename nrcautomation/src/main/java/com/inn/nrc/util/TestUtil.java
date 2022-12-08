@@ -10,7 +10,9 @@ import org.apache.commons.io.IOUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-public class TestUtil {
+import com.inn.nrc.base.TestBase;
+
+public class TestUtil extends TestBase{
 
 
 	public static String takeScreenshotAtEndOfTestFromBase64() throws IOException

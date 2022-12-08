@@ -26,7 +26,7 @@ public class TestBase {
 		
 		try {
 			prop= new Properties();
-			FileInputStream fis = new FileInputStream("C:\\Users\\kondeti.reddy\\Documents\\Softwares\\team_project_att\\nrcautomation\\src\\main\\java\\com\\inn\\nrc\\config\\confi.properties");
+			FileInputStream fis = new FileInputStream("config.properties");
 			prop.load(fis);
 		}
 		catch (FileNotFoundException e) {
@@ -61,7 +61,6 @@ public class TestBase {
 			driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.MINUTES);
 			driver.manage().timeouts().implicitlyWait(2, TimeUnit.MINUTES);//its a global wait applicable to all WebElement which driver interact
 			driver.get(prop.getProperty("url"));
-		
 	
 	}
 
