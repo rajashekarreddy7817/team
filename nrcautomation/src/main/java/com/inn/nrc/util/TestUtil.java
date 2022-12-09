@@ -31,7 +31,7 @@ public class TestUtil extends TestBase{
 
 	public static void waitTillElementVisible(By by) {
 		try {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(driver, 5);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 		}
 		catch (Exception e) {
