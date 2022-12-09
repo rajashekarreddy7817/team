@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.inn.nrc.testcases.HomePageTest">
+      <class name="com.inn.nrc.testcases.JobTaskListingTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="navigateToJobTest"/>
           <include name="setUp"/>
+          <include name="acquireTaskTest"/>
         </methods>
-      </class> <!-- com.inn.nrc.testcases.HomePageTest -->
+      </class> <!-- com.inn.nrc.testcases.JobTaskListingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

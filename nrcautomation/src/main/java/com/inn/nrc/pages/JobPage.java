@@ -12,6 +12,10 @@ public class JobPage extends TestBase{
 
 	@FindBy(id="global-search-input")
 	WebElement globalSearchBox;
+	@FindBy(xpath = "//div[contains(text(),' istMOD0ab1306 ')]")
+	WebElement selectjob;
+	@FindBy(xpath = "//span[text()='Tasks']")
+	WebElement clickontasks;
 	
 	
 	public JobPage() {
@@ -24,6 +28,9 @@ public class JobPage extends TestBase{
 		globalSearchBox.sendKeys("istMOD0ab1306");
 		Thread.sleep(5000);
 		globalSearchBox.sendKeys(Keys.RETURN);
+		selectjob.click();
+		clickontasks.click();
+		
 	}
 	
 	
