@@ -13,7 +13,7 @@ import com.inn.nrc.base.TestBase;
 
 public class JobTaskListing extends TestBase{
 	
-	@FindBy(xpath ="//mat-icon[contains(text(),' more_vert')][@xpath='1']")
+	@FindBy(xpath ="//div[@row-index='0']/descendant::mat-icon[@aria-label='mat icon']")
 	WebElement clickon3dots;
 	@FindBy(xpath = "//span[contains(text(),'Acquire')]")
 	WebElement acquireBtn;
