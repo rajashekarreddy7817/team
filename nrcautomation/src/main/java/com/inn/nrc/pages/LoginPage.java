@@ -1,5 +1,6 @@
 package com.inn.nrc.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,24 +9,17 @@ import com.inn.nrc.base.TestBase;
 
 public class LoginPage extends TestBase {
 
-	@FindBy(id = "username")
-	WebElement username;
 
-	@FindBy(id = "password")
-	WebElement password;
+	By username= By.id("username");
+	By password= By.id("password");
+	By submit= By.name("SUBMIT");
 
-	@FindBy(name = "SUBMIT")
-	WebElement submit;
 
-	// Initilization the pagefactory
-	public LoginPage() {
-		PageFactory.initElements(driver, this);
-	}
 
 	public HomePage loginNRC(String usn, String pwd){
-		username.sendKeys(usn);
-		password.sendKeys(pwd);
-		submit.click();
+		driver.findElement(username).sendKeys(usn);
+		driver.findElement(password).sendKeys(pwd);
+		driver.findElement(submit).click();
 		return new HomePage();
 
 	}

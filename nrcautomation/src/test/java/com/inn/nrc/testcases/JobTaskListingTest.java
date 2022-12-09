@@ -8,6 +8,7 @@ import com.inn.nrc.pages.HomePage;
 import com.inn.nrc.pages.JobPage;
 import com.inn.nrc.pages.JobTaskListing;
 import com.inn.nrc.pages.LoginPage;
+import com.inn.nrc.util.TestUtil;
 
 public class JobTaskListingTest extends TestBase {
 	
@@ -15,7 +16,7 @@ public class JobTaskListingTest extends TestBase {
 	HomePage homePage;
 	JobPage jobPage;
 	JobTaskListing jobTaskListing;
-	
+	TestUtil testUtil;
 
 	@BeforeMethod
 	public void setUp() throws Exception {
@@ -27,7 +28,8 @@ public class JobTaskListingTest extends TestBase {
 		jobPage = new JobPage();
 			jobPage.searchJobNo();
 		jobTaskListing =new JobTaskListing();
-			}	
+		testUtil= new TestUtil();
+	}	
 	
 	
 	@Test

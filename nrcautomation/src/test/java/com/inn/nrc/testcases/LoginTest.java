@@ -14,10 +14,7 @@ public class LoginTest extends TestBase{
 	//ExtentTest test;
 //	ExtentSparkReporter spark ;
 	
-	public LoginTest() {
-	super();
-	}
-	
+
 	@BeforeMethod
 	public void setUp() {
 		initilization();
@@ -37,7 +34,7 @@ public class LoginTest extends TestBase{
 	@AfterMethod
 	public void tearDown()
 	{
-//		driver.quit();
+		driver.quit();
 	}
 
 	
