@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.inn.nrc.base.TestBase;
+import com.inn.nrc.pages.CaptureMacroRF;
 import com.inn.nrc.pages.HomePage;
 import com.inn.nrc.pages.JobPage;
 import com.inn.nrc.pages.JobTaskListing;
@@ -17,6 +18,8 @@ public class JobTaskListingTest extends TestBase {
 	JobPage jobPage;
 	JobTaskListing jobTaskListing;
 	TestUtil testUtil;
+	CaptureMacroRF capturemacrorf;
+	
 
 	@BeforeMethod
 	public void setUp() throws Exception {
@@ -29,6 +32,7 @@ public class JobTaskListingTest extends TestBase {
 			jobPage.searchJobNo();
 		jobTaskListing =new JobTaskListing();
 		testUtil= new TestUtil();
+		capturemacrorf =new CaptureMacroRF();
 	}	
 	
 	
@@ -36,6 +40,9 @@ public class JobTaskListingTest extends TestBase {
 	public void acquireTaskTest() throws Exception {
 		
 		jobTaskListing.acquireTask();
+		capturemacrorf.capturemacrorf();
+		 
+		
 	}
 	
 	
