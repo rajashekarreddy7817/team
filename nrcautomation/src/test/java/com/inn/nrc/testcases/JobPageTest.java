@@ -24,16 +24,13 @@ public class JobPageTest extends TestBase {
 		homePage.navigateToJob();
 		jobPage = new JobPage();
 		jobPage.searchJobNo();
-		// driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);//its a
-		// global wait applicable to all WebElement which driver interact
-
+		
 	}
 
 	@Test
 	public void searchJobNoTest() throws Exception {
 		Thread.sleep(3000);
 		jobPage.searchJobNo();
-		Thread.sleep(2000);
 
 	}
 

@@ -14,27 +14,8 @@ public class JobTaskListing extends TestBase{
 	By acquireBtn= By.xpath("//span[contains(text(),'Acquire')]");
 	
 	
-	
-	
-	
-//	WebElement  element=driver.findElement(By.xpath"//span[contains(text(),'Acquire')]");  
-
-//	
-//	public void waitTillElementVisible(By by) {
-//		try {
-//		WebDriverWait wait = new WebDriverWait(driver, 20);
-//		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-//		}
-//		catch (Exception e) {
-//			System.out.println("Exception occured while waiting for the Element. "+by);
-//		}
-//	}
-//	
-	
-	
   public void acquireTask() throws Exception {
-	 //waitTillElementVisible(clickon3dots)
-	TestUtil.waitTillElementVisible(clickon3dots);
+	 TestUtil.waitTillElementVisible(clickon3dots);
 	  driver.findElement(clickon3dots).click();
 	TestUtil.waitTillElementVisible(acquireBtn);
 		driver.findElement(acquireBtn).click();

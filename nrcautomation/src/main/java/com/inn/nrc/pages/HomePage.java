@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.inn.nrc.base.TestBase;
+import com.inn.nrc.util.TestUtil;
 
 public class HomePage extends TestBase{
 
@@ -14,7 +15,7 @@ public class HomePage extends TestBase{
 	
 	
 	public void navigateToJob() throws Exception {
-		Thread.sleep(3000);
+		TestUtil.waitTillElementVisible(menuBar);
 		driver.findElement(menuBar).click();
 		driver.findElement(jobModule).click();
 		}

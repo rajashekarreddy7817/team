@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.inn.nrc.base.TestBase;
+import com.inn.nrc.util.TestUtil;
 
 public class JobPage extends TestBase{
 
@@ -20,8 +21,8 @@ public class JobPage extends TestBase{
 	
 	public void searchJobNo() throws Exception
 	{
-		driver.findElement(globalSearchBox).sendKeys("istMOD0ab1306");
-		Thread.sleep(5000);
+		TestUtil.waitTillElementVisible(globalSearchBox);
+		driver.findElement(globalSearchBox).sendKeys(prop.getProperty("jobnumber"));
 		driver.findElement(globalSearchBox).sendKeys(Keys.RETURN);
 		driver.findElement(selectjob).click();
 		driver.findElement(clickontasks).click();
