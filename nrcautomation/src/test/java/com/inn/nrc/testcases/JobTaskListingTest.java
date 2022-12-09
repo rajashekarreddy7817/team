@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.inn.nrc.base.TestBase;
 import com.inn.nrc.pages.CaptureMacroRF;
+import com.inn.nrc.pages.CaptureSow;
 import com.inn.nrc.pages.HomePage;
 import com.inn.nrc.pages.JobPage;
 import com.inn.nrc.pages.JobTaskListing;
@@ -19,7 +20,7 @@ public class JobTaskListingTest extends TestBase {
 	JobTaskListing jobTaskListing;
 	TestUtil testUtil;
 	CaptureMacroRF capturemacrorf;
-	
+	CaptureSow captureSow ;
 
 	@BeforeMethod
 	public void setUp() throws Exception {
@@ -33,6 +34,7 @@ public class JobTaskListingTest extends TestBase {
 		jobTaskListing =new JobTaskListing();
 		testUtil= new TestUtil();
 		capturemacrorf =new CaptureMacroRF();
+		captureSow = new CaptureSow();
 	}	
 	
 	
@@ -44,6 +46,11 @@ public class JobTaskListingTest extends TestBase {
 		 
 		
 	}
-	
+	@Test
+	public void excuteSOWTest() throws Exception{
+		jobTaskListing.acquireSOWTask();
+		captureSow.fillStructureStatusSection();
+		
+	}
 	
 }
