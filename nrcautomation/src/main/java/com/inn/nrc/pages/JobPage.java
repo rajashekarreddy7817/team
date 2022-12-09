@@ -10,7 +10,7 @@ import com.inn.nrc.util.TestUtil;
 public class JobPage extends TestBase{
 
 	By globalSearchBox=By.xpath("//input[@id='global-search-input']");
-	By selectjob=By.xpath("//div[contains(text(),' istMOD0ab1306 ')]");
+	By selectjob=By.xpath("//div[contains(text(),' 243407 ')]");
 	By clickontasks=By.xpath("//span[text()='Tasks']");
 	
 	

@@ -40,7 +40,7 @@ public class JobTaskListingTest extends TestBase {
 	public void acquireTaskTest() throws Exception {
 		
 		jobTaskListing.acquireTask();
-		capturemacrorf.capturemacrorf();
+		capturemacrorf.capturemacrorf(); 
 		 
 		
 	}

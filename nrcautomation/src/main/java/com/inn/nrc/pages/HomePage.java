@@ -5,11 +5,11 @@ import org.openqa.selenium.By;
 import com.inn.nrc.base.TestBase;
 import com.inn.nrc.util.TestUtil;
 
-public class HomePage extends TestBase{
+public class HomePage extends TestBase {
 
-	By menuBar= By.xpath("//mat-icon[@class='mat-icon notranslate icon-hover icomoon menu mat-icon-no-color ng-star-inserted']");
-	By jobModule= By.xpath("//label[contains(text(),'Jobs')]");
-
+	By menuBar = By.xpath(
+			"//mat-icon[@class='mat-icon notranslate icon-hover icomoon menu mat-icon-no-color ng-star-inserted']");
+	By jobModule = By.xpath("//label[contains(text(),'Jobs')]");
 
 	public void navigateToJob() throws Exception {
 		Thread.sleep(3000);
@@ -18,10 +18,4 @@ public class HomePage extends TestBase{
 		driver.findElement(jobModule).click();
 	}
 
-
-
-
-
-
 }
-

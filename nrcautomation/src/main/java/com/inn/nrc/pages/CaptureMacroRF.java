@@ -5,19 +5,25 @@ import org.openqa.selenium.By;
 import com.inn.nrc.base.TestBase;
 import com.inn.nrc.util.TestUtil;
 
-public class CaptureMacroRF extends TestBase{
-	By basicdetails=By.xpath("//mat-panel-title[normalize-space()='Basic Details']");
-	By allRequiredSupportingDocumentationBeenUploadedRadioBtn=By.xpath("//label[@for='mat-radio-51-input']//span[@class='mat-radio-outer-circle']");
-	
-	
-	
-	
-	
-public void capturemacrorf() {
-	TestUtil.waitTillElementVisible(basicdetails);
-	driver.findElement(basicdetails).click();
-	TestUtil.waitTillElementVisible(allRequiredSupportingDocumentationBeenUploadedRadioBtn);
-	driver.findElement(allRequiredSupportingDocumentationBeenUploadedRadioBtn).click();
-}
+public class CaptureMacroRF extends TestBase {
+	By basicdetails = By.xpath("//mat-panel-title[contains(text(),' Basic Details ')]");
+	// By allRequiredSupportingDocumentationBeenUploadedRadioBtn=
+	// By.xpath("//mat-radio-button[@id='mat-radio-128']//span[@class='mat-radio-container']");
+	By Verification = By.xpath("//mat-panel-title[contains(text(),'Verification')]");
+	By structuretype = By.xpath("//mat-option[@id='mat-option-246']//span[@class='mat-option-text']");
+
+	public void capturemacrorf() {
+		TestUtil.waitTillElementVisible(basicdetails);
+		driver.findElement(basicdetails).click();
+		// TestUtil.waitTillElementVisible(allRequiredSupportingDocumentationBeenUploadedRadioBtn);
+		// driver.findElement(allRequiredSupportingDocumentationBeenUploadedRadioBtn).click();
+		TestUtil.waitTillElementVisible(Verification);
+		driver.findElement(Verification).click();
+		TestUtil.waitTillElementVisible(structuretype);
+		driver.findElement(structuretype).click();
+		TestUtil.waitTillElementVisible(structuretype);
+		driver.findElement(structuretype).click();
+
+	}
 
 }
