@@ -12,7 +12,7 @@ public class HomePage extends TestBase{
 
 
 	public void navigateToJob() throws Exception {
-		TestUtil.waitTillElementVisible(menuBar);
+		Thread.sleep(3000);
 		driver.findElement(menuBar).click();
 		TestUtil.waitTillElementVisible(jobModule);
 		driver.findElement(jobModule).click();
