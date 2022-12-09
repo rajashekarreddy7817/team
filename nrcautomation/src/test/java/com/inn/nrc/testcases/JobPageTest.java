@@ -8,12 +8,14 @@ import com.inn.nrc.base.TestBase;
 import com.inn.nrc.pages.HomePage;
 import com.inn.nrc.pages.JobPage;
 import com.inn.nrc.pages.LoginPage;
+import com.inn.nrc.util.TestUtil;
 
 public class JobPageTest extends TestBase {
 
 	LoginPage loginPage;
 	HomePage homePage;
 	JobPage jobPage;
+	TestUtil testUtil ;
 
 	@BeforeMethod
 	public void setUp() throws Exception {
@@ -24,6 +26,8 @@ public class JobPageTest extends TestBase {
 		homePage.navigateToJob();
 		jobPage = new JobPage();
 		jobPage.searchJobNo();
+		testUtil = new TestUtil(); 
+				
 		// driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);//its a
 		// global wait applicable to all WebElement which driver interact
 
@@ -31,14 +35,14 @@ public class JobPageTest extends TestBase {
 
 	@Test
 	public void searchJobNoTest() throws Exception {
-		Thread.sleep(3000);
-		jobPage.searchJobNo();
 		Thread.sleep(2000);
+		jobPage.searchJobNo();
+	
 
 	}
 
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }
