@@ -10,17 +10,23 @@ import com.inn.nrc.util.TestUtil;
 public class JobPage extends TestBase{
 
 	By globalSearchBox=By.xpath("//input[@id='global-search-input']");
-	By selectjob=By.xpath("//div[contains(text(),' 243407 ')]");
+	By selectjob=By.xpath("//div[contains(text(),'istMOD0ab1306')]");
 	By clickontasks=By.xpath("//span[text()='Tasks']");
 	
 	
 
 	
-	public void searchJobNo() throws Exception
+	public void searchJobNo() 
 	{
 		TestUtil.waitTillElementVisible(globalSearchBox);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
 		driver.findElement(globalSearchBox).sendKeys("istMOD0ab1306");
-		driver.findElement(globalSearchBox).sendKeys(Keys.RETURN);
+		driver.findElement(globalSearchBox).sendKeys(Keys.ENTER);
 		driver.findElement(selectjob).click();
 		driver.findElement(clickontasks).click();
 		
