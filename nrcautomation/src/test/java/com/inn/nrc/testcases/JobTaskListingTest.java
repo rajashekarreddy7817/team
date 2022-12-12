@@ -1,5 +1,7 @@
 package com.inn.nrc.testcases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -29,12 +31,14 @@ public class JobTaskListingTest extends TestBase {
 			homePage = loginPage.loginNRC(prop.getProperty("username"), prop.getProperty("password"));
 		homePage = new HomePage();
 			homePage.navigateToJob();
+			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		jobPage = new JobPage();
 			jobPage.searchJobNo();
 		jobTaskListing =new JobTaskListing();
 		testUtil= new TestUtil();
 		capturemacrorf =new CaptureMacroRF();
 		captureSow = new CaptureSow();
+		//driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	}	
 	
 	
@@ -43,7 +47,7 @@ public class JobTaskListingTest extends TestBase {
 		
 		jobTaskListing.acquireTask();
 		capturemacrorf.capturemacrorf(); 
-		 
+		jobTaskListing.cancelAcquire();
 		
 	}
 	@Test

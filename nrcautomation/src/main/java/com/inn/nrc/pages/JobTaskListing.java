@@ -18,6 +18,8 @@ public class JobTaskListing extends TestBase{
 	By acquireSOWBtn= By.xpath("//span[contains(text(),'Acquire')]");
 	By executeSOWBtn= By.xpath("//mat-icon[@class='mat-icon notranslate icon-hover icomoon Like-Outline mat-icon-no-color ng-star-inserted']");
 	By executeSOW4thBtn=By.xpath("//button[@class='mat-focus-indicator mat-menu-item ng-star-inserted'])[4]");
+	By cancelacquire=By.xpath("//span[contains(text(),'Cancel Acquire')]");
+	By cancelacquire1=By.xpath("(//span[contains(text(),'Cancel Acquire')])[2]");
 	
   public void acquireTask() throws Exception {
 	 //waitTillElementVisible(clickon3dots)
@@ -32,7 +34,15 @@ public class JobTaskListing extends TestBase{
   }
   
   
+  public void cancelAcquire() {
+	  driver.findElement(clickOn3DotsMacro).click();
+	  TestUtil.waitTillElementToBeClickable(cancelacquire);
+	  driver.findElement(cancelacquire).click();
+	  TestUtil.waitTillElementVisible(cancelacquire1);
+	  driver.findElement(cancelacquire1).click();
   
+}
+
   
   
   

@@ -39,5 +39,14 @@ public class TestUtil extends TestBase{
 		}
 	}
 	
+	public static void waitTillElementToBeClickable(By by) {
+		try {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.elementToBeClickable(by));
+		}
+		catch (Exception e) {
+			System.out.println("Exception occured while waiting for the Element. "+by);
+		}
+	}
 
 }
