@@ -19,15 +19,15 @@ import com.inn.nrc.base.TestBase;
 public class TestUtil extends TestBase{
 
 
-//	public static String takeScreenshotAtEndOfTestFromBase64() throws IOException
-//	{
-//		File scrFile=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-//		String currentDir = System.getProperty("user.dir");
-//		File descFile=new File(currentDir+"//screenshots"+System.currentTimeMillis()+".png");
-//		FileUtils.copyFile(scrFile, descFile);
-//		byte[] imageByte =IOUtils.toByteArray(new FileInputStream(descFile)); 
-//		return Base64.getEncoder().encodeToString(imageByte);
-//	}
+	public static String takeScreenshotAtEndOfTestFromBase64() throws IOException
+	{
+		File scrFile=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String currentDir = System.getProperty("user.dir");
+		File descFile=new File("screenshot/"+System.currentTimeMillis()+".png");
+		FileUtils.copyFile(scrFile, descFile);
+		byte[] imageByte =IOUtils.toByteArray(new FileInputStream(descFile)); 
+		return Base64.getEncoder().encodeToString(imageByte);
+	}
 
 	public static void waitTillElementVisible(By by) {
 		try {
@@ -48,5 +48,12 @@ public class TestUtil extends TestBase{
 			System.out.println("Exception occured while waiting for the Element. "+by);
 		}
 	}
-
+	public static void waitThreadSleep(By by) {
+		try {
+			Thread.sleep(5000);		
+			}
+		catch (Exception e) {
+			System.out.println("Exception occured while waiting for the Element. "+by);
+		}
+	}
 }

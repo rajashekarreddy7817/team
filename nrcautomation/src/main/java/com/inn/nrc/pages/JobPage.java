@@ -27,6 +27,7 @@ public class JobPage extends TestBase{
 		}
 		driver.findElement(globalSearchBox).sendKeys("istMOD0ab1306");
 		driver.findElement(globalSearchBox).sendKeys(Keys.ENTER);
+		TestUtil.waitThreadSleep(selectjob);
 		driver.findElement(selectjob).click();
 		driver.findElement(clickontasks).click();
 		

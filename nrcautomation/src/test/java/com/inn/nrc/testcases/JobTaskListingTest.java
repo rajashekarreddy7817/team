@@ -2,7 +2,9 @@ package com.inn.nrc.testcases;
 
 import java.util.concurrent.TimeUnit;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.inn.nrc.base.TestBase;
@@ -14,6 +16,7 @@ import com.inn.nrc.pages.JobTaskListing;
 import com.inn.nrc.pages.LoginPage;
 import com.inn.nrc.util.TestUtil;
 
+@Listeners(com.inn.nrc.util.ListnersNG.class)
 public class JobTaskListingTest extends TestBase {
 	
 	LoginPage loginPage;
@@ -56,5 +59,10 @@ public class JobTaskListingTest extends TestBase {
 		captureSow.fillStructureStatusSection();
 		
 	}
-	
+
+	@AfterMethod
+	public void tearDown()
+	{
+	//	driver.quit();
+	}
 }

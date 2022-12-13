@@ -20,7 +20,7 @@ public class CaptureMacroRF extends TestBase {
 	By cancelbtn = By.xpath("//span[contains(text(),'Cancel')]");
 
 	public void capturemacrorf() throws Exception {
-		TestUtil.waitTillElementVisible(basicdetails);
+		TestUtil.waitThreadSleep(basicdetails);
 		driver.findElement(basicdetails).click();
 		TestUtil.waitTillElementVisible(allRequiredSupportingDocumentationBeenUploadedRadioBtn);
 		driver.findElement(allRequiredSupportingDocumentationBeenUploadedRadioBtn).click();
@@ -28,7 +28,7 @@ public class CaptureMacroRF extends TestBase {
 		driver.findElement(DesignationOrCategory).click();
 		TestUtil.waitTillElementVisible(Verification);
 		driver.findElement(Verification).click();
-		TestUtil.waitTillElementVisible(structureType);
+		TestUtil.waitThreadSleep(structureType);
 		driver.findElement(structureType).click();
 		TestUtil.waitTillElementVisible(structureTypeMonopole);
 		driver.findElement(structureTypeMonopole).click();

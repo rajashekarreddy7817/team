@@ -18,16 +18,16 @@ public class CaptureSow extends TestBase{
 	{
 		TestUtil.waitTillElementVisible(structureStatusSectionDropDown);
 		driver.findElement(structureStatusSectionDropDown).click();
-		TestUtil.waitTillElementVisible(lat_Long_GEUpdate);
-		driver.findElement(lat_Long_GEUpdate).click();
-		
-		driver.findElement(selectLat_Long_GEUpdateYes).click();
-		driver.findElement(groundElevation).clear();
-		driver.findElement(groundElevation).sendKeys("12");
-		driver.findElement(structureHeight).clear();
-		driver.findElement(structureHeight).sendKeys("100");
-		driver.findElement(overallHeight).clear();
-		driver.findElement(overallHeight).sendKeys("100");
+//		TestUtil.waitTillElementVisible(lat_Long_GEUpdate);
+//		driver.findElement(lat_Long_GEUpdate).click();
+//		
+//		driver.findElement(selectLat_Long_GEUpdateYes).click();
+//		driver.findElement(groundElevation).clear();
+//		driver.findElement(groundElevation).sendKeys("12");
+//		driver.findElement(structureHeight).clear();
+//		driver.findElement(structureHeight).sendKeys("100");
+//		driver.findElement(overallHeight).clear();
+//		driver.findElement(overallHeight).sendKeys("100");
 		
 		
 	}

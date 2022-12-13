@@ -44,20 +44,10 @@ public class JobTaskListing extends TestBase{
 }
 
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   public void acquireSOWTask()
   {
+	  TestUtil.waitThreadSleep(clickOn3DotSow);
 	  TestUtil.waitTillElementVisible(clickOn3DotSow);
-	  
 	  driver.findElement(clickOn3DotSow).click();
 	  TestUtil.waitTillElementVisible(acquireSOWBtn);
 	  driver.findElement(acquireSOWBtn).click();
