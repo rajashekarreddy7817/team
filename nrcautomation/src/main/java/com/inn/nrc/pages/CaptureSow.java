@@ -7,7 +7,7 @@ import com.inn.nrc.util.TestUtil;
 
 public class CaptureSow extends TestBase{
 	By structureStatusSectionDropDown=By.xpath(" //mat-panel-title[contains(text(),'Structure Status Section ')]");
-	By lat_Long_GEUpdate= By.xpath("//div[@class='mat-select-trigger ng-tns-c203-77']");
+	By lat_Long_GEUpdate= By.xpath("//div[@class='mat-select-value ng-tns-c203-211']//parent::div//parent::mat-select[@role='combobox']");
 	By selectLat_Long_GEUpdateYes= By.xpath("(//span[contains(text(),'No')])[3]");
 	By groundElevation=By.xpath("//input[@class='mat-input-element mat-form-field-autofill-control ng-tns-c123-382 ng-pristine ng-invalid cdk-text-field-autofill-monitored ng-touched']");
 	By overallHeight =By.xpath("//input[@class='mat-input-element mat-form-field-autofill-control ng-tns-c123-382 ng-invalid cdk-text-field-autofill-monitored ng-touched ng-dirty']");
