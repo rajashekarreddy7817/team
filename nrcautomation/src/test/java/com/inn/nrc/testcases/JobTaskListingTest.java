@@ -53,12 +53,12 @@ public class JobTaskListingTest extends TestBase {
 		jobTaskListing.cancelAcquire();
 		
 	}
-	@Test
-	public void excuteSOWTest() throws Exception{
-		jobTaskListing.acquireSOWTask();
-		captureSow.fillStructureStatusSection();
-		
-	}
+//	@Test
+//	public void excuteSOWTest() throws Exception{
+//		jobTaskListing.acquireSOWTask();
+//		captureSow.fillStructureStatusSection();
+//		
+//	}
 
 	@AfterMethod
 	public void tearDown()

@@ -11,12 +11,12 @@ public class CaptureMacroRF extends TestBase {
 	By allRequiredSupportingDocumentationBeenUploadedRadioBtn = By.xpath("(//mat-label[contains(text(),'No')])[4]");
 	By DesignationOrCategory = By.xpath("(//mat-label[contains(text(),'No')])[1]");
 	By Verification = By.xpath("//mat-panel-title[contains(text(),'Verification')]");
-	By structureType = By.xpath("//div[@class='mat-select-trigger ng-tns-c203-65']");
+	By structureType = By.xpath("(//mat-select[@role='combobox'])[3]");
 	By structureTypeMonopole = By.xpath("//span[contains(text(),'Monopole')]");
-	By MethodOfEvaluation = By.xpath("//div[@class='mat-select-value ng-tns-c203-72']");
+	By MethodOfEvaluation = By.xpath("(//mat-select[@role='combobox'])[4]");
 	By methodOfEvaluationRoofview = By.xpath("//span[contains(text(),'Roofview')]");
 	By RFSafetyMitigation = By.xpath("(//mat-label[contains(text(),'No')])[5]");
-	By AntennaBottomTipHeight = By.xpath("//input[contains(@class,'ng-tns-c123-68 ng-untouched')]");
+	By AntennaBottomTipHeight = By.xpath("//input[contains(@class,'ng-invalid cdk-text-field-autofill-monitored')]");
 	By cancelbtn = By.xpath("//span[contains(text(),'Cancel')]");
 
 	public void capturemacrorf() throws Exception {
@@ -28,6 +28,8 @@ public class CaptureMacroRF extends TestBase {
 		driver.findElement(DesignationOrCategory).click();
 		TestUtil.waitTillElementVisible(Verification);
 		driver.findElement(Verification).click();
+		TestUtil.waitTillElementVisible(AntennaBottomTipHeight);
+		driver.findElement(AntennaBottomTipHeight).sendKeys("100");
 		TestUtil.waitThreadSleep(structureType);
 		driver.findElement(structureType).click();
 		TestUtil.waitTillElementVisible(structureTypeMonopole);
@@ -38,8 +40,6 @@ public class CaptureMacroRF extends TestBase {
 		driver.findElement(methodOfEvaluationRoofview).click();
 		TestUtil.waitTillElementVisible(RFSafetyMitigation);
 		driver.findElement(RFSafetyMitigation).click();
-		TestUtil.waitTillElementVisible(AntennaBottomTipHeight);
-		driver.findElement(AntennaBottomTipHeight).sendKeys("100");
 		driver.findElement(cancelbtn).click();
 
 	}

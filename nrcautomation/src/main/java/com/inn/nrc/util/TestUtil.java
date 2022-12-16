@@ -3,6 +3,7 @@ package com.inn.nrc.util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Base64;
 
 import org.apache.commons.io.FileUtils;
@@ -22,7 +23,6 @@ public class TestUtil extends TestBase{
 	public static String takeScreenshotAtEndOfTestFromBase64() throws IOException
 	{
 		File scrFile=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		String currentDir = System.getProperty("user.dir");
 		File descFile=new File("screenshot/"+System.currentTimeMillis()+".png");
 		FileUtils.copyFile(scrFile, descFile);
 		byte[] imageByte =IOUtils.toByteArray(new FileInputStream(descFile)); 
@@ -55,5 +55,11 @@ public class TestUtil extends TestBase{
 		catch (Exception e) {
 			System.out.println("Exception occured while waiting for the Element. "+by);
 		}
+	}
+
+	public void clickable(By by)
+	{
+		driver.findElement(by).click();
+
 	}
 }
