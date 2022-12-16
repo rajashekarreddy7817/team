@@ -40,11 +40,11 @@ public class JobTaskListing extends TestBase {
 	}
 
 	
-	public void cancelAcquire() {
+	public void cancelAcquire() throws Exception {
 		driver.findElement(clickOn3DotsMacro).click();
 		TestUtil.waitTillElementToBeClickable(cancelacquire);
 		driver.findElement(cancelacquire).click();
-		TestUtil.waitTillElementVisible(cancelacquire1);
+		Thread.sleep(3000);
 		driver.findElement(cancelacquire1).click();
 
 	}
