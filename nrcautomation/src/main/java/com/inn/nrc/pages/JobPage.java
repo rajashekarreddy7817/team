@@ -25,12 +25,17 @@ public class JobPage extends TestBase{
 			
 			e.printStackTrace();
 		}
-		driver.findElement(globalSearchBox).sendKeys("istMOD0ab1306");
+		TestUtil.sendKeysOnElement(globalSearchBox, "istMOD0ab1306");
+		
+//		driver.findElement(globalSearchBox).sendKeys("istMOD0ab1306");
 		TestUtil.waitThreadSleep(globalSearchBox);
 		driver.findElement(globalSearchBox).sendKeys(Keys.ENTER);
-		TestUtil.waitThreadSleep(selectjob);
-		driver.findElement(selectjob).click();
-		driver.findElement(clickontasks).click();
+		TestUtil.clickOnByElement(selectjob);
+
+//		driver.findElement(selectjob).click();
+
+		TestUtil.clickOnByElement(clickontasks);
+//		driver.findElement(clickontasks).click();
 		
 	}
 	

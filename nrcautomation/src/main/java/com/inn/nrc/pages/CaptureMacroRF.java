@@ -20,28 +20,32 @@ public class CaptureMacroRF extends TestBase {
 	By cancelbtn = By.xpath("//span[contains(text(),'Cancel')]");
 
 	public void capturemacrorf() throws Exception {
-		TestUtil.waitThreadSleep(basicdetails);
-		driver.findElement(basicdetails).click();
-		TestUtil.waitTillElementVisible(allRequiredSupportingDocumentationBeenUploadedRadioBtn);
-		driver.findElement(allRequiredSupportingDocumentationBeenUploadedRadioBtn).click();
+		TestUtil.clickOnByElement(basicdetails);	
+//		driver.findElement(basicdetails).click();
+		TestUtil.clickOnByElement(allRequiredSupportingDocumentationBeenUploadedRadioBtn);
+//		driver.findElement(allRequiredSupportingDocumentationBeenUploadedRadioBtn).click();
 		Thread.sleep(2000);
-		driver.findElement(DesignationOrCategory).click();
-		TestUtil.waitTillElementVisible(Verification);
-		driver.findElement(Verification).click();
-		TestUtil.waitTillElementVisible(AntennaBottomTipHeight);
-		driver.findElement(AntennaBottomTipHeight).sendKeys("100");
-		TestUtil.waitThreadSleep(structureType);
-		driver.findElement(structureType).click();
-		TestUtil.waitTillElementVisible(structureTypeMonopole);
-		driver.findElement(structureTypeMonopole).click();
-		TestUtil.waitTillElementVisible(MethodOfEvaluation);
-		driver.findElement(MethodOfEvaluation).click();
-		TestUtil.waitTillElementVisible(methodOfEvaluationRoofview);
-		driver.findElement(methodOfEvaluationRoofview).click();
-		TestUtil.waitTillElementVisible(RFSafetyMitigation);
+		TestUtil.clickOnByElement(DesignationOrCategory);		
+	//	driver.findElement(DesignationOrCategory).click();
+		TestUtil.clickOnByElement(Verification);
+	//	driver.findElement(Verification).click();
+		TestUtil.sendKeysOnElement(AntennaBottomTipHeight,"100");
+//		driver.findElement(AntennaBottomTipHeight).sendKeys("100");
+		TestUtil.clickOnByElement(structureType);
+//		driver.findElement(structureType).click();
+		TestUtil.clickOnByElement(structureTypeMonopole);
+//		driver.findElement(structureTypeMonopole).click();
+		TestUtil.clickOnByElement(MethodOfEvaluation);
+//		driver.findElement(MethodOfEvaluation).click();
+		TestUtil.clickOnByElement(methodOfEvaluationRoofview);
+//		driver.findElement(methodOfEvaluationRoofview).click();
+		TestUtil.clickOnByElement(RFSafetyMitigation);
 		driver.findElement(RFSafetyMitigation).click();
-		driver.findElement(cancelbtn).click();
+		TestUtil.clickOnByElement(cancelbtn);
+		
+//		driver.findElement(cancelbtn).click();
 
+	
 	}
 
 }
