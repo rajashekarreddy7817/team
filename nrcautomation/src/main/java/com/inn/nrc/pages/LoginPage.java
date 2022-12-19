@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.inn.nrc.base.TestBase;
+import com.inn.nrc.util.TestUtil;
 
 public class LoginPage extends TestBase {
-
 
 	By username= By.id("username");
 	By password= By.id("password");
@@ -17,9 +17,14 @@ public class LoginPage extends TestBase {
 
 
 	public HomePage loginNRC(String usn, String pwd){
-		driver.findElement(username).sendKeys(usn);
-		driver.findElement(password).sendKeys(pwd);
-		driver.findElement(submit).click();
+		TestUtil.sendKeysOnElement(username, usn);
+		TestUtil.sendKeysOnElement(password, pwd);
+		TestUtil.clickOnByElement(submit);
+		
+//		driver.findElement(username).sendKeys(usn);
+//		driver.findElement(password).sendKeys(pwd);
+//		driver.findElement(submit).click();
+		
 		return new HomePage();
 
 	}

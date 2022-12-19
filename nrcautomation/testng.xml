@@ -6,10 +6,9 @@
 	</listeners>
 	<test thread-count="5" name="NRCAutomationTest">
 		<classes>
-
+			<class name="com.inn.nrc.testcases.JobTaskListingTest" />
 			<class name="com.inn.nrc.testcases.LoginTest" />
 			<class name="com.inn.nrc.testcases.HomePageTest" />
-			<class name="com.inn.nrc.testcases.JobTaskListingTest" />
 			<class name="com.inn.nrc.testcases.JobPageTest" />
 
 		</classes>

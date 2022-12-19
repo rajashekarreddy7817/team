@@ -18,51 +18,49 @@ import com.inn.nrc.util.TestUtil;
 
 @Listeners(com.inn.nrc.util.ListnersNG.class)
 public class JobTaskListingTest extends TestBase {
-	
+
 	LoginPage loginPage;
 	HomePage homePage;
 	JobPage jobPage;
 	JobTaskListing jobTaskListing;
 	TestUtil testUtil;
 	CaptureMacroRF capturemacrorf;
-	CaptureSow captureSow ;
+	CaptureSow captureSow;
 
 	@BeforeMethod
 	public void setUp() throws Exception {
 		initilization();
 		loginPage = new LoginPage();
-			homePage = loginPage.loginNRC(prop.getProperty("username"), prop.getProperty("password"));
+		homePage = loginPage.loginNRC(prop.getProperty("username"), prop.getProperty("password"));
 		homePage = new HomePage();
-			homePage.navigateToJob();
-			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		homePage.navigateToJob();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		jobPage = new JobPage();
-			jobPage.searchJobNo();
-		jobTaskListing =new JobTaskListing();
-		testUtil= new TestUtil();
-		capturemacrorf =new CaptureMacroRF();
+		jobPage.searchJobNo();
+		jobTaskListing = new JobTaskListing();
+		testUtil = new TestUtil();
+		capturemacrorf = new CaptureMacroRF();
 		captureSow = new CaptureSow();
-		//driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-	}	
-	
-	
+		// driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+	}
+
 	@Test
 	public void acquireTaskTest() throws Exception {
-		
+
 		jobTaskListing.acquireTask();
-		capturemacrorf.capturemacrorf(); 
+		capturemacrorf.capturemacrorf();
 		jobTaskListing.cancelAcquire();
-		
+
 	}
-//	@Test
-//	public void excuteSOWTest() throws Exception{
-//		jobTaskListing.acquireSOWTask();
-//		captureSow.fillStructureStatusSection();
-//		
-//	}
+
+	@Test
+	public void excuteSOWTest() throws Exception {
+		jobTaskListing.acquireSOWTask();
+		captureSow.fillStructureStatusSection();
+	}
 
 	@AfterMethod
-	public void tearDown()
-	{
-	//	driver.quit();
+	public void tearDown() {
+		driver.quit();
 	}
 }
