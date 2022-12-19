@@ -10,21 +10,15 @@ import com.inn.nrc.util.TestUtil;
 
 public class LoginPage extends TestBase {
 
-	By username= By.id("username");
-	By password= By.id("password");
-	By submit= By.name("SUBMIT");
+	By username = By.id("username");
+	By password = By.id("password");
+	By submit = By.name("SUBMIT");
 
-
-
-	public HomePage loginNRC(String usn, String pwd){
+	public HomePage loginNRC(String usn, String pwd) {
 		TestUtil.sendKeysOnElement(username, usn);
 		TestUtil.sendKeysOnElement(password, pwd);
 		TestUtil.clickOnByElement(submit);
-		
-//		driver.findElement(username).sendKeys(usn);
-//		driver.findElement(password).sendKeys(pwd);
-//		driver.findElement(submit).click();
-		
+
 		return new HomePage();
 
 	}

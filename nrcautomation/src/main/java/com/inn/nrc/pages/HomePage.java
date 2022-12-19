@@ -12,11 +12,8 @@ public class HomePage extends TestBase {
 	By jobModule = By.xpath("//label[contains(text(),'Jobs')]");
 
 	public void navigateToJob() throws Exception {
-//		Thread.sleep(3000);
-	//	driver.findElement(menuBar).click();
-		TestUtil.clickOnByElement(menuBar);		
+		TestUtil.clickOnByElement(menuBar);
 		TestUtil.clickOnByElement(jobModule);
-//		driver.findElement(jobModule).click();
 	}
 
 }

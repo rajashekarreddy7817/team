@@ -24,6 +24,7 @@
 			<artifactId>selenium-server</artifactId>
 			<version>3.141.59</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
@@ -49,11 +50,13 @@
 			<artifactId>extentreports</artifactId>
 			<version>5.0.9</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
-			<groupId>com.epam.healenium</groupId>
-			<artifactId>healenium-web</artifactId>
-			<version>3.3.1</version>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.7.2</version>
 		</dependency>
+
 
 	</dependencies>
 
@@ -100,29 +103,29 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.0.0</version>
 				</plugin>
-				  <plugin> 
-                <groupId>com.epam.healenium</groupId> 
-                <artifactId>hlm-report-mvn</artifactId> 
-                <version>1.1</version> 
-                <executions> 
-                    <execution> 
-                        <id>hlmReport</id> 
-                        <phase>compile</phase> 
-                        <goals> 
-                            <goal>initReport</goal> 
-                        </goals> 
-                    </execution> 
-                    <execution> 
-                        <id>hlmReportB</id> 
-                        <phase>test</phase> 
-                        <goals> 
-                            <goal>buildReport</goal> 
-                        </goals> 
-                    </execution> 
-                </executions> 
-            </plugin>
-				
-				
+				<plugin>
+					<groupId>com.epam.healenium</groupId>
+					<artifactId>hlm-report-mvn</artifactId>
+					<version>1.1</version>
+					<executions>
+						<execution>
+							<id>hlmReport</id>
+							<phase>compile</phase>
+							<goals>
+								<goal>initReport</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>hlmReportB</id>
+							<phase>test</phase>
+							<goals>
+								<goal>buildReport</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+
 			</plugins>
 		</pluginManagement>
 	</build>

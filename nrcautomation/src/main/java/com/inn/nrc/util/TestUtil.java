@@ -3,7 +3,6 @@ package com.inn.nrc.util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.Base64;
 
 import org.apache.commons.io.FileUtils;
@@ -15,7 +14,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.github.dockerjava.zerodep.shaded.org.apache.hc.core5.util.Timeout;
 import com.inn.nrc.base.TestBase;
 
 public class TestUtil extends TestBase {
