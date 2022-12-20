@@ -6,21 +6,19 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.grid.internal.listeners.SelfHealingProxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-
-import com.epam.healenium.SelfHealingDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	
 	public static WebDriver driver;
-//	public static SelfHealingDriver driver;
 	public static Properties prop;
-	//public static ExtentTest test;
+
+		//	public static SelfHealingDriver driver;
+		//public static ExtentTest test;
 	
 
 	public TestBase()   {
@@ -49,16 +47,18 @@ public class TestBase {
 			{
 				WebDriverManager.chromedriver().setup();
 				driver= new ChromeDriver();
-		//		driver=SelfHealingDriver.create(driver1);
+			//	driver=SelfHealingDriver.create(driver1);
 			}
 			else
 				if(browser.equalsIgnoreCase("edge"))
 				{
 					WebDriverManager.edgedriver().setup();
 					driver=new EdgeDriver();
-					}
+			//		driver=SelfHealingDriver.create(driver1);
+		
+				}
 
-			driver.manage().deleteAllCookies();
+		//	driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);//its a global wait applicable to all WebElement which driver interact

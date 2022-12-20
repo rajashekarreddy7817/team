@@ -21,47 +21,39 @@ public class JobTaskListing extends TestBase {
 	By cancelacquire1 = By.xpath("(//span[contains(text(),'Cancel Acquire')])[2]");
 
 	public void acquireTask() throws Exception {
-		// waitTillElementVisible(clickon3dots)
-		// TestUtil.waitTillElementVisible(clickOn3DotsMacro);
+
 		TestUtil.clickOnByElement(clickOn3DotsMacro);
 
-		// driver.findElement(clickOn3DotsMacro).click();
 		try {
 			driver.findElement(acquireBtn).isDisplayed();
 			TestUtil.clickOnByElement(acquireBtn);
-			// driver.findElement(acquireBtn).click();
 			TestUtil.clickOnByElement(executeFromActionList);
-			// driver.findElement(executeFromActionList).click();
 		} catch (Exception e) {
 			driver.findElement(executebtn).isDisplayed();
 			TestUtil.clickOnByElement(executebtn);
-			// driver.findElement(executebtn).click();
-
 		}
 
 	}
 
 	public void cancelAcquire() {
 		TestUtil.clickOnByElement(clickOn3DotsMacro);
-//		driver.findElement(clickOn3DotsMacro).click();
 		TestUtil.clickOnByElement(cancelacquire);
-		// driver.findElement(cancelacquire).click();
 		TestUtil.clickOnByElement(cancelacquire1);
-//		driver.findElement(cancelacquire1).click();
-
 	}
 
-	public void acquireSOWTask() {
+	
 
-		TestUtil.clickOnByElement(clickOn3DotSow);
-		// driver.findElement(clickOn3DotSow).click();
+		public void acquireSOWTask() {
 
-		TestUtil.clickOnByElement(acquireSOWBtn);
-		// driver.findElement(acquireSOWBtn).click();
-
-		TestUtil.clickOnByElement(executeSOWBtn);
-		// driver.findElement(executeSOWBtn).click();
-
-	}
+			TestUtil.clickOnByElement(clickOn3DotSow);
+			try {
+				driver.findElement(acquireBtn).isDisplayed();
+				TestUtil.clickOnByElement(acquireSOWBtn);
+				TestUtil.clickOnByElement(executeSOWBtn);
+			} catch (Exception e) {
+				driver.findElement(executeSOWBtn).isDisplayed();
+				TestUtil.clickOnByElement(executeSOWBtn);
+			}
+		}
 
 }

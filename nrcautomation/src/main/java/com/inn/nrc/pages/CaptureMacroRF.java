@@ -21,29 +21,16 @@ public class CaptureMacroRF extends TestBase {
 
 	public void capturemacrorf() throws Exception {
 		TestUtil.clickOnByElement(basicdetails);
-//		driver.findElement(basicdetails).click();
 		TestUtil.clickOnByElement(allRequiredSupportingDocumentationBeenUploadedRadioBtn);
-//		driver.findElement(allRequiredSupportingDocumentationBeenUploadedRadioBtn).click();
-		Thread.sleep(2000);
 		TestUtil.clickOnByElement(DesignationOrCategory);
-		// driver.findElement(DesignationOrCategory).click();
 		TestUtil.clickOnByElement(Verification);
-		// driver.findElement(Verification).click();
 		TestUtil.sendKeysOnElement(AntennaBottomTipHeight, "100");
-//		driver.findElement(AntennaBottomTipHeight).sendKeys("100");
 		TestUtil.clickOnByElement(structureType);
-//		driver.findElement(structureType).click();
 		TestUtil.clickOnByElement(structureTypeMonopole);
-//		driver.findElement(structureTypeMonopole).click();
 		TestUtil.clickOnByElement(MethodOfEvaluation);
-//		driver.findElement(MethodOfEvaluation).click();
 		TestUtil.clickOnByElement(methodOfEvaluationRoofview);
-//		driver.findElement(methodOfEvaluationRoofview).click();
 		TestUtil.clickOnByElement(RFSafetyMitigation);
-		driver.findElement(RFSafetyMitigation).click();
 		TestUtil.clickOnByElement(cancelbtn);
-
-//		driver.findElement(cancelbtn).click();
 
 	}
 
