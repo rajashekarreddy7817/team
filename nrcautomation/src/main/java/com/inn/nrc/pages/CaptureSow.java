@@ -12,12 +12,11 @@ public class CaptureSow extends TestBase {
 
 	By structureStatusSectionDropDown = By
 			.xpath("//mat-panel-title[contains(text(),' Structure Status Section ')]//following::span[1]");
-	By lat_Long_GEUpdate = By.xpath(
-			"(//div[contains(@class,'mat-select-value ng-tns')]//following::span[contains(@class,'mat-select-placeholder mat-select-min-line ng-tns')])[1]");
-	By selectLat_Long_GEUpdateYes = By.xpath("(//span[contains(text(),'No')]//following::div[1])[4]");
+	By lat_Long_GEUpdate = By.xpath("(//mat-select[@role='combobox'])[7]");
+	By selectLat_Long_GEUpdateno = By.xpath("//span[text()='No']");
 
 	By groundElevation = By.xpath(
-			"//input[@class='mat-input-element mat-form-field-autofill-control ng-tns-c123-382 ng-pristine ng-invalid cdk-text-field-autofill-monitored ng-touched']");
+			"//input[contains(@class,'mat-input-element mat-form-field-autofill-control ng-tns-c127-28' )]");
 	By overallHeight = By.xpath(
 			"//input[@class='mat-input-element mat-form-field-autofill-control ng-tns-c123-382 ng-invalid cdk-text-field-autofill-monitored ng-touched ng-dirty']");
 
@@ -28,7 +27,7 @@ public class CaptureSow extends TestBase {
 	public void fillStructureStatusSection() throws Exception {
 
 		TestUtil.clickOnByElement(structureStatusSectionDropDown);
-		TestUtil.clickOnByElement(selectLat_Long_GEUpdateYes);
+		//TestUtil.clickOnByElement(selectLat_Long_GEUpdateno);
 		TestUtil.clearElement(groundElevation);
 		TestUtil.sendKeysOnElement(groundElevation, "12");
 		TestUtil.clearElement(structureHeight);
