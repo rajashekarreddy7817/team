@@ -18,7 +18,8 @@ public class CaptureMacroRF extends TestBase {
 	By RFSafetyMitigation = By.xpath("(//mat-label[contains(text(),'No')])[5]");
 	By AntennaBottomTipHeight = By.xpath("//input[contains(@class,'ng-invalid cdk-text-field-autofill-monitored')]");
 	By cancelbtn = By.xpath("//span[contains(text(),'Cancel')]");
-
+	By submitBtn = By.xpath("//span[contains(text(),'Submit')]//parent::span//parent::button");
+	
 	public void capturemacrorf() throws Exception {
 		TestUtil.clickOnByElement(basicdetails);
 		TestUtil.clickOnByElement(allRequiredSupportingDocumentationBeenUploadedRadioBtn);
@@ -30,8 +31,9 @@ public class CaptureMacroRF extends TestBase {
 		TestUtil.clickOnByElement(MethodOfEvaluation);
 		TestUtil.clickOnByElement(methodOfEvaluationRoofview);
 		TestUtil.clickOnByElement(RFSafetyMitigation);
-		TestUtil.clickOnByElement(cancelbtn);
-
+		//TestUtil.clickOnByElement(cancelbtn);
+		driver.findElement(submitBtn).click();
+		driver.findElement(submitBtn).click();
 	}
 
 }

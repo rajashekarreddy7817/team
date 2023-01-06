@@ -35,7 +35,7 @@ public class JobPageTest extends TestBase {
 	@Test
 	public void searchJobNoTest() throws Exception {
 		Thread.sleep(2000);
-		jobPage.searchJobNo();
+		jobPage.searchJobNo();		
 		}
 
 	@AfterMethod

@@ -30,7 +30,7 @@ public class LoginTest extends TestBase{
 	@Test(priority=1)
 	public void loginTest() {
 		homePage=loginPage.loginNRC(prop.getProperty("username"), prop.getProperty("password"));
-		
+		System.out.println("############# User Login Successfully ############# ");
 	}
 
 	@AfterMethod

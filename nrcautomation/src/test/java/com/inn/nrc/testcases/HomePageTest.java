@@ -29,10 +29,11 @@ public class HomePageTest extends TestBase{
 		
 	}
 
-	@Test(priority=1)
+	@Test
 	public void navigateToJobTest() throws Exception 
 	{
 		homePage.navigateToJob();
+		System.out.println("############# User Navigated To Job Page #############");
 	}
 
 	@AfterMethod

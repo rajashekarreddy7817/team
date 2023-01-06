@@ -1,10 +1,12 @@
 package com.inn.nrc.util;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.inn.nrc.base.TestBase;
 
-public class ExtentReportNG {
+public class ExtentReportNG extends TestBase{
 
 	public static ExtentReports getReportObject() {
 		ExtentSparkReporter spark = new ExtentSparkReporter(".//NRCExtentreport.html");

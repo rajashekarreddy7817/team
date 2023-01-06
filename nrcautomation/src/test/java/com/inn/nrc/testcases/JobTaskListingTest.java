@@ -44,7 +44,7 @@ public class JobTaskListingTest extends TestBase {
 		// driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	}
 
-	@Test
+	@Test(priority=1)
 	public void acquireTaskTest() throws Exception {
 
 		jobTaskListing.acquireTask();
@@ -53,7 +53,7 @@ public class JobTaskListingTest extends TestBase {
 
 	}
 
-	@Test
+	@Test(priority=2)
 	public void excuteSOWTest() throws Exception {
 		jobTaskListing.acquireSOWTask();
 		captureSow.fillStructureStatusSection();
@@ -61,6 +61,6 @@ public class JobTaskListingTest extends TestBase {
 
 	@AfterMethod
 	public void tearDown() {
-		//driver.quit();
+	//	driver.quit();
 	}
 }

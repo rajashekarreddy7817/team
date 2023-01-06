@@ -14,20 +14,14 @@ public class CaptureSow extends TestBase {
 			.xpath("//mat-panel-title[contains(text(),' Structure Status Section ')]//following::span[1]");
 	By lat_Long_GEUpdate = By.xpath("(//mat-select[@role='combobox'])[7]");
 	By selectLat_Long_GEUpdateno = By.xpath("//span[text()='No']");
-
-	By groundElevation = By.xpath(
-			"//input[contains(@class,'mat-input-element mat-form-field-autofill-control ng-tns-c127-28' )]");
-	By overallHeight = By.xpath(
-			"//input[@class='mat-input-element mat-form-field-autofill-control ng-tns-c123-382 ng-invalid cdk-text-field-autofill-monitored ng-touched ng-dirty']");
-
-	By structureHeight = By.xpath(
-			"//input['//input[@class='mat-input-element mat-form-field-autofill-control ng-tns-c123-86 ng-pristine ng-invalid cdk-text-field-autofill-monitored ng-touched']");
-	By heightfields = By.xpath("");
-
+	By groundElevation = By.xpath("(//input[@type='text' and @maxlength='10'])[2]");
+	By overallHeight = By.xpath("(//input[@type=\"text\" and @maxlength='10'])[5]");
+	By structureHeight = By.xpath("(//input[@type='text' and @maxlength='10'])[4]");
+	
 	public void fillStructureStatusSection() throws Exception {
-
+		Thread.sleep(4000);
 		TestUtil.clickOnByElement(structureStatusSectionDropDown);
-		//TestUtil.clickOnByElement(selectLat_Long_GEUpdateno);
+		// TestUtil.clickOnByElement(selectLat_Long_GEUpdateno);
 		TestUtil.clearElement(groundElevation);
 		TestUtil.sendKeysOnElement(groundElevation, "12");
 		TestUtil.clearElement(structureHeight);
@@ -38,11 +32,22 @@ public class CaptureSow extends TestBase {
 
 		TestUtil.sendKeysOnElement(overallHeight, "100");
 
-////		List<WebElement> heightGroundElevationClear = driver.findElements(heightfields);
-////		for (int i = 0; i < heightGroundElevationClear.size(); i++) {
-////			System.out.println(heightGroundElevationClear.size());
-////			TestUtil.waitThreadSleep(groundElevation);
-////			heightGroundElevationClear.get(0).clear();
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		//		List<WebElement> heightGroundElevationClear = driver.findElements(heightfields);
+//		for (int i = 0; i < heightGroundElevationClear.size(); i++) {
+//			System.out.println(heightGroundElevationClear.size());
+//			TestUtil.waitThreadSleep(groundElevation);
+//			heightGroundElevationClear.get(0).clear();
 //		}
 
 	}

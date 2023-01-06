@@ -9,7 +9,8 @@ import com.inn.nrc.util.TestUtil;
 public class JobPage extends TestBase {
 
 	By globalSearchBox = By.xpath("//input[@id='global-search-input']");
-	By selectjob = By.xpath("//div[contains(text(),'istMOD0ab1306')]");
+//	By selectjob = By.xpath("//div[contains(text(),'istMOD0ab1306')]");
+	By selectjob = By.xpath("//div[contains(text(),'"+prop.getProperty("jobnumber")+"')]");
 	By clickontasks = By.xpath("//span[text()='Tasks']");
 
 	public void searchJobNo() {
@@ -21,7 +22,7 @@ public class JobPage extends TestBase {
 			e.printStackTrace();
 		}
 		TestUtil.sendKeysOnElement(globalSearchBox, prop.getProperty("jobnumber"));
-	//	TestUtil.waitThreadSleep(globalSearchBox);
+		TestUtil.waitThreadSleep(globalSearchBox);
 		driver.findElement(globalSearchBox).sendKeys(Keys.ENTER);
 		TestUtil.clickOnByElement(selectjob);
 		TestUtil.clickOnByElement(clickontasks);

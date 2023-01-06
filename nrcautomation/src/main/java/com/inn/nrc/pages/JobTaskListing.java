@@ -1,8 +1,13 @@
 package com.inn.nrc.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
 import com.inn.nrc.base.TestBase;
 import com.inn.nrc.util.TestUtil;
+
+import io.reactivex.rxjava3.functions.Action;
 
 public class JobTaskListing extends TestBase {
 
@@ -19,9 +24,12 @@ public class JobTaskListing extends TestBase {
 	By executeSOW4thBtn = By.xpath("//button[@class='mat-focus-indicator mat-menu-item ng-star-inserted'])[4]");
 	By cancelacquire = By.xpath("//span[contains(text(),'Cancel Acquire')]");
 	By cancelacquire1 = By.xpath("(//span[contains(text(),'Cancel Acquire')])[2]");
+	By captureMacroRFTask = By.xpath("//div[contains(text(),'Capture MACRO RF')]");
+	By captureSOWTask = By.xpath("//div[contains(text(),'Capture SOW')]");
 
+	
 	public void acquireTask() throws Exception {
-
+//		TestUtil.clickOnByElement(captureMacroRFTask);
 		TestUtil.clickOnByElement(clickOn3DotsMacro);
 
 		try {
@@ -41,19 +49,17 @@ public class JobTaskListing extends TestBase {
 		TestUtil.clickOnByElement(cancelacquire1);
 	}
 
-	
-
-		public void acquireSOWTask() {
-
-			TestUtil.clickOnByElement(clickOn3DotSow);
-			try {
-				driver.findElement(acquireBtn).isDisplayed();
-				TestUtil.clickOnByElement(acquireSOWBtn);
-				TestUtil.clickOnByElement(executeSOWBtn);
-			} catch (Exception e) {
-				driver.findElement(executeSOWBtn).isDisplayed();
-				TestUtil.clickOnByElement(executeSOWBtn);
-			}
+	public void acquireSOWTask() {
+		TestUtil.clickOnByElement(captureSOWTask);
+		TestUtil.clickOnByElement(clickOn3DotSow);
+		try {
+			driver.findElement(acquireBtn).isDisplayed();
+			TestUtil.clickOnByElement(acquireSOWBtn);
+			TestUtil.clickOnByElement(executeSOWBtn);
+		} catch (Exception e) {
+			driver.findElement(executeSOWBtn).isDisplayed();
+			TestUtil.clickOnByElement(executeSOWBtn);
 		}
+	}
 
 }
